@@ -9,18 +9,47 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
+    @IBOutlet weak var tipDefault: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
     
-  // @IBAction func setDefault(_ sender: Any) {
-       // let defaults = UserDefaults.resetStandardUserDefaults()
+ /* @IBAction func setDefault(_ sender: Any) {
+    
+    let tipPercentages = [0.18, 0.20, 0.25]
+    let defaults = UserDefaults.standard
+    let finalDef = tipPercentages[tipDefault.selectedSegmentIndex]
+    
+    defaults.set(finalDef, forKey: "SavedArray")
+    let savedArray = defaults.double(forKey: "SavedArray")
+    
+    defaults.synchronize() */
 
-   // let array = [0.18, 0.20, 0.25]
- //   UserDefaults.standard.set(array, forKey: "SavedArray")
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let defaults = UserDefaults.standard
+        tipDefault.selectedSegmentIndex = defaults.integer(forKey: "selectedIndex")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        let defaults = UserDefaults.standard
+        let selectedIndex = tipDefault.selectedSegmentIndex
+        
+        defaults.set(selectedIndex, forKey: "selectedIndex")
+        defaults.synchronize()
+    }
+    
+
+    
+
     
     
     
@@ -42,4 +71,4 @@ class SettingsViewController: UIViewController {
     }
     */
 
-//}
+

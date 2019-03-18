@@ -9,6 +9,29 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>TipMate.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>27EEAFE721C36A1600A0F82B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>27EEAFFB21C36A1700A0F82B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>27EEB00621C36A1700A0F82B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>
